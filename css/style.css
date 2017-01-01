@@ -1,0 +1,183 @@
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body {
+  overflow: hidden;
+  background:#5F5E5B;
+  font-size:16px;
+}
+
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+ .clearfix {
+    zoom: 0;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+#canvas-club{
+    position:absolute;
+    z-index:-1
+}
+
+#context{
+    width: 800px;
+    height: 500px;
+    background: rgba(64,100,80,0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin:-250px 0 0 -400px;
+    border-radius: 3px;
+}
+#context .c_top{
+	width:760px;
+	height:10px;
+	padding:20px 0 10px 40px;
+}
+.c_top .logo{
+	color:#fff;
+	height:30px;
+	line-height: 30px;
+	font-size: 20px;
+}
+.c_top .search{
+	width:310px;
+	border-radius: 15px;
+	margin-right: 120px;
+	padding:5px;
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+.c_top .search>input{
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    padding:0 10px;
+}
+.c_top .search>span{
+	display: block;
+	background: url(../images/search.png) no-repeat center center;
+	background-size: cover;
+	position: absolute;
+	width:20px;
+	height:20px;
+	top:5px;
+	right:10px;
+	cursor: pointer;
+}
+
+#context #c_left{
+    width: 250px;
+    margin: 50px 0 0 40px;
+    float:left;
+    border: 3px solid #4C4607;
+}
+#context #c_left img{
+    width: 100%;
+    display: block;
+}
+
+#context #c_right{
+    width: 400px;
+    height: 340px;
+    margin-top:37px;
+    margin-left:70px;
+    float:left;
+    color:#fff;
+}
+#context #c_right #tittle{
+    font-size:30px;
+    color:#fff;
+    margin-top:5px;
+    margin-bottom:10px;
+}
+#context #c_right #desc{
+    font-size:20px;
+    width:380px;
+    white-space:nowrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+}
+
+#context #c_right #lrc{
+    height: 222px;
+    overflow:hidden;
+    margin-top:40px;
+    transition: all .3s ease;
+}
+
+#lrc_list li{
+    padding-bottom: 12px;
+    height: 16px;
+    transition: all .3s ease;
+
+}
+#lrc_list li.hover{
+    color:yellow;
+    transition: all .3s ease;
+}
+
+#audio {
+    position: absolute;
+    left: 40px;
+    bottom: 75px;
+    width: 256px;
+}
+.s_show{
+	position: absolute;
+	top:55px;
+	right:120px;
+	overflow: hidden;
+	z-index: 99;
+	width: 318px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	background-color: #FFF;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.1);
+}
+
+.s_show dt {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    color: #666;
+    background-color: #F0F0F0;
+}
+.s_show dd {
+    padding: 10px;
+}
+/*.s_show dd ul{
+	padding:
+}*/
+.s_show dd ul li {
+	width:84%;
+	font-size:14px;
+	height:25px;
+	line-height:25px;
+	padding:0 40px 0 10px;
+	border-radius: 4px;
+	overflow: hidden;
+	position: relative;
+}
+.s_show dd ul li span{
+	position: absolute;
+	top:0;
+	right:10px;
+	display: inline-block;
+	width:25px;
+	height:25px;
+	background: url(../images/sing.png) no-repeat center center;
+}
+.s_show dd ul li:hover{
+	background-color: #F0F0F0 ;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="locdee">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>落地的音乐盒</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/ng.js"></script>
+	</head>
+	<body ng-controller="indexCtrl">
+		<canvas id="canvas-club"></canvas>
+		<div id="context">
+			<div class="c_top clearfix">
+				<div class="logo f_left">Locdee's musical box</div>
+				<div class="search f_right">
+					<input type="text" placeholder="请输入关键字" ng-model="searchsong" />
+					<span ng-click="getsong()"></span>
+				</div>
+				<div class="s_show" ng-show="bool">
+					<dl>
+						<dt>歌曲</dt>
+						<dd>
+							<ul>
+								<li  ng-repeat="s in songs" id="{{s.song_id}}" ng-click="singsong(this)">{{s.song_name}}<span></span></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="c_bottom clearfix" locmusic>
+				<div id="c_left">
+					<img ng-src={{albumPic}} width="100%" alt="图片">
+				</div>
+				<div id="c_right">
+					<div id="tittle">{{title}}</div>
+					<div id="desc">
+						<span>歌手：</span><span>{{singer}}&nbsp;&nbsp;</span><span>专辑：</span><span title="{{album}}">{{album}}</span>
+					</div>
+					<div id="lrc">
+						<ul id="lrc_list">
+						</ul>
+					</div>
+				</div>
+				<audio id="audio" ng-src="{{song}}" locmusic controls></audio>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="js/bg.js"></script>
+
+	</body>
+
+</html>
