@@ -78,7 +78,7 @@ app.controller('indexCtrl',function($scope,$http,$sce,$document,getlrc){
 	
 	$scope.singsong = function(li){
 		$scope.songid = li.s.song_id;
-		$http.jsonp('http://api.lostg.com/music/xiami/songs/'+$scope.songid,{
+		$http.jsonp('https://api.lostg.com/music/xiami/songs/'+$scope.songid,{
 			params: {
 						'lyric':1,
 						'callback': 'JSON_CALLBACK'
