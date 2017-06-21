@@ -103,7 +103,7 @@ app.controller('indexCtrl',function($scope,$http,$sce,$document,getlrc){
 				});
 	};
 	$scope.getsong = function(){
-		$http.jsonp('http://www.xiami.com/search/json', {
+		$http.jsonp('https://www.xiami.com/search/json', {
 					params: {
 						'k': $scope.searchsong,
 						't':4,
